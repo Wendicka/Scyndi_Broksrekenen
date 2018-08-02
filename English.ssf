@@ -1,0 +1,53 @@
+{ English Language table }
+
+module BroksRekenenEnglish
+
+const intro1 = "Hello, my name is Computer"
+const intro2 = "What is your name?"
+const intro3 = "Hello, "
+const intro4 = "It's time for some calculation lessons"
+const intro5 = "What kind of calculation lessons do you want to do?"
+
+const menu = "Choose between the next options:
+
+	1. Multiplication tables
+
+	2. Addition
+
+	3. Subtraction
+
+	4. Dividing
+
+	5. Multiplying
+
+Make your choice: "
+
+const mtafeltje  = "Which table do you want to do? "
+const moptellen  = "How high may the number be you want to add with? "
+const maftrekken = "How high may the number be you want to subtract with? "
+const mdelen     = "How high may the number to be diveded be? "
+const mkeer      = "How high may the result maximally be? "
+
+const laag       = "That is far too low. I'll ask this again."
+const hoog       = "That's too high for me. I'll ask this again"
+
+const howmuch    = "How many tasks do you want to do? "
+const lazy       = "Geez, you're lazy. I'll ask you again!"
+const workaholic = "Geez, you ARE a worcoholic. I'll ask you again!"
+
+const taskn       = "Task #"
+const saygood    = "Well done"
+const saybad     = "That's not right. The correct answer is"
+
+const AllTasksDone = "You've done all your calculation tasks"
+const uitGoed    = "  Correct answers:"
+const uitFout    = "Incorrect answers:"
+
+const GoAgain    = "Do you want to do this again ? (Y/N) "
+
+const Enough1    = "Obviously you've had enough,"
+const Enough2    = "It was a pleasure working with you"
+const Enough3    = "Goodbye"
+
+
+const lagain = "y"

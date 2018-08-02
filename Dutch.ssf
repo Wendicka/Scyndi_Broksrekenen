@@ -1,0 +1,53 @@
+{ Dutch language table}
+
+module BroksRekenenDutch
+
+
+const intro1 = "Hallo, ik heet Computer"
+const intro2 = "Hoe heet jij?"
+const intro3 = "Hallo, "
+const intro4 = "We gaan nu rekenen"
+const intro5 = "Wat voor sommen wil je maken?"
+
+const menu = "Kies uit de volgende mogelijkheden:
+
+	1. Tafeltjes
+
+	2. Optellen
+
+	3. Aftrekken
+
+	4. Delen
+
+	5. Vermenigvuldigen
+
+Maak je keuze: " 
+ 
+const mtafeltje  = "Welk tafeltje wil je maken? "
+const moptellen  = "Hoe hoog mag het getal zijn waarmee je wilt optellen? "
+const maftrekken = "Hoe hoog mag het getal zijn waarmee je wilt aftrekken? "
+const mdelen     = "Hoe hoog mag het te delen getal zijn? "
+const mkeer      = "Hoe hoog mag de uitkomst maximaal zijn? "
+
+const laag       = "Nou dat is wel erg laag. Je krijgt de vraag nog eens."
+const hoog       = "Dat is te hoog voor mij. Je krijgt de vraag nog eens."
+
+const howmuch    = "Hoeveel sommetjes wil je maken? "
+const lazy       = "Wat ben je lui vandaag. Je krijgt de vraag nog eens."
+const workaholic = "Jee, jij bent wel een worcoholic, zeg. Je krijgt de vraag nog eens."
+
+const taskn      = "Som: "
+const saygood    = "Goed zo"
+const saybad     = "Dat is niet goed. Het juiste antwoord is"
+
+const AllTasksDone = "Je hebt alle sommen nu gemaakt"
+const uitGoed    = "Aantal goed:"
+const uitFout    = "Aantal fout:"
+
+const GoAgain    = "Wil je nog een keertje ? (J/N) "
+
+const Enough1    = "Je hebt er kennelijk genoeg van,"
+const Enough2    = "Het was prettig met je te werken"
+const Enough3    = "Tot ziens"
+
+const lagain = "j"

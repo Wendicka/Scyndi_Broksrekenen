@@ -1,0 +1,146 @@
+var
+	name:string
+	again:string
+	kind:string
+	qa:integer
+	worknumber:integer
+	tasks:integer
+	goed:integer
+	fout:integer
+	getal1:integer
+	getal2:integer
+	rekenteken:string
+	goedeantwoord:integer
+	antwoord:integer
+end
+
+
+
+void introduction
+	WriteLn "******************************"
+	WriteLn "******************************"
+	writeln "**                          **"
+	writeln "**                          **"
+	writeln "**                          **"
+	WriteLn "**       R E K E N E N      **"
+	writeln "**                          **"
+	writeln "**                          **"
+	writeln "**                          **"
+	WriteLn "******************************"
+	WriteLn "******************************"
+	writeln "\n\n"
+	writeln intro1
+	name:=ReadLn(intro2+" ")
+end
+
+void Introduction2
+	writeln intro3,name+";"
+	writeln intro4
+	writeln intro5
+	writeln
+end
+
+void ChooseKind
+	repeat
+		kind:=readln(menu)
+	until kind="1" or kind="2" or kind="3" or kind="4" or kind="5"
+end
+
+void CAsk question:string,minimal:integer,maximal:integer,toolittle:string,toomuch:string
+	do
+		qa:=ReadInt(question)
+		if qa<minimal
+			writeln toolittle
+		elseif qa>maximal
+			writeln toomuch
+		else
+			return
+		end
+	loop
+end
+
+void PreQuestions
+	if   kind=="1"; CAsk mtafeltje,2,10,laag,hoog
+	elif kind=="2"; CAsk moptellen,5,5000,laag,hoog
+	elif kind=="3"; CAsk maftrekken,6,5000,laag,hoog
+	elif kind=="4"; CAsk mdelen,10,5000,laag,hoog
+	elif kind=="5"; CAsk mkeer,20,5000,laag,hoog; end
+	worknumber:=qa
+	CAsk howmuch,10,20,lazy,workaholic
+	Tasks:=qa
+end
+
+void DoTasks
+	goed:=0
+	fout:=0
+	for task:=1,tasks
+		write taskn
+		if task<10; write " "; end
+		write task,"\t\t"
+		if kind=="1"
+			getal1:=task
+			getal2:=worknumber
+			goedeantwoord:=getal1*getal2
+			rekenteken="*"
+		elif kind=="2"
+			getal1=rand(2,worknumber)
+			getal2=rand(2,worknumber)
+			goedeantwoord:=getal1+getal2
+			rekenteken="+"
+		elif kind=="3"
+			getal1=rand(3,worknumber)
+			getal2=rand(2,getal1)
+			goedeantwoord:=getal1-getal2
+			rekenteken="-"
+		elif kind=="4"
+			repeat
+				getal2=rand(2,worknumber)
+				goedeantwoord=rand(2,worknumber)
+				getal1=getal2*goedeantwoord
+				rekenteken=":"
+			until getal1<=worknumber
+		elif kind=="5"
+			repeat
+				getal1=rand(2,worknumber)
+				getal2=rand(2,worknumber)
+				goedeantwoord=getal1*getal2
+			until goedeantwoord<=worknumber
+			rekenteken:="x"
+		end
+		write getal1,rekenteken,getal2,"="
+		antwoord:=readint(" ")
+		if antwoord=goedeantwoord
+			writeln saygood
+			goed++
+		else
+			writeln saybad,goedeantwoord
+			fout++
+		end
+	end
+end	
+		
+
+func AllDone:Boolean
+	writeln AllTasksDone
+	writeln uitgoed,goed
+	writeln uitfout,fout
+	again=readln(GoAgain)
+	return again<>lagain
+end
+
+void GoodBye
+	writeln enough1,name
+	writeln enough2
+	writeln enough3
+end
+
+void main
+	introduction
+	do
+		Introduction2
+		ChooseKind
+		PreQuestions
+		DoTasks
+	until AllDone()
+	Goodbye
+end
